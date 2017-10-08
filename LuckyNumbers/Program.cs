@@ -10,7 +10,7 @@ namespace LuckyNumbers
     {
         static void Main(string[] args)
         {
-            string playAgain = "";
+            string playAgain;
 
             do
             {
@@ -85,7 +85,10 @@ namespace LuckyNumbers
             }
             while (playAgain == "YES");
 
-
+            if (playAgain == "NO")
+            {
+                Console.WriteLine("Thanks for playing!");
+            }
 
 
 
