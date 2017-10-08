@@ -10,11 +10,13 @@ namespace LuckyNumbers
     {
         static void Main(string[] args)
         {
+            //Part 4 do while loop here
             string playAgain;
 
             do
             {
-
+                //declared jackpot early on
+                //Part 1/2
                 double jackpot = 100.00;
                 Console.WriteLine("Welcome to Raz's Lucky Numbers Go Big Or Go Broke Lottery");
                 Console.WriteLine("Please select the starting number");
@@ -43,6 +45,7 @@ namespace LuckyNumbers
                     }
                 }
 
+                //Part 2/3
                 Console.WriteLine("I will now attempt to guess 6 random numbers within your range.");
                 Console.WriteLine("If you guessed all the numbers correctly, you win the jackpot of $" + jackpot + ".");
                 Console.WriteLine("You will get a % amount of the jackpot depending on the matching numbers.");
@@ -50,7 +53,7 @@ namespace LuckyNumbers
                 double userWin = 0;
                 double userMoney = 0;
 
-
+                //Random number generator code.
                 int[] randomGenerator = new int[6];
                 Random rand = new Random();
                 for (int number = 0; number < 6; number++)
@@ -61,7 +64,8 @@ namespace LuckyNumbers
                     Console.WriteLine("Lucky number: " + randomGenerator[number]);
                 }
 
-
+                //.Contains here attempts to match the random generator array indexes to each of the luckyNumbers array.
+                //.Contains was found on Google.
                 for (int i = 0; i < 6; i++)
                 {
                     if (randomGenerator.Contains(luckyNumbers[i]))
@@ -71,7 +75,7 @@ namespace LuckyNumbers
 
                 }
 
-
+                //Part 3/4
 
                 Console.WriteLine("You guessed " + userMoney + " numbers correctly!");
 
